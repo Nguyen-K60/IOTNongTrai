@@ -309,7 +309,7 @@ public class MainActivity extends Activity implements CNNListener, MqttCallback 
         ivCaptured.setImageBitmap(bmp);
         tvLabel.setText(IMAGENET_CLASSES[result]);
         tenBenh = IMAGENET_CLASSES[result];
-        if (!tenBenh.equals("lá cà chua khỏe mạnh")) {
+        if (!tenBenh.equals("Lá cà chua khỏe mạnh")) {
             boolean connected = false;
             ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
             if(connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED ||
@@ -320,24 +320,7 @@ public class MainActivity extends Activity implements CNNListener, MqttCallback 
             else
                 connected = false;
             if(connected){
-                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        switch (which){
-                            case DialogInterface.BUTTON_POSITIVE:
-                                uploadImage(fileUpload);
-                                break;
-
-                            case DialogInterface.BUTTON_NEGATIVE:
-                                //No button clicked
-                                break;
-                        }
-                    }
-                };
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setMessage("Bạn có muốn tải ảnh lên cloud không?").setPositiveButton("Có", dialogClickListener)
-                        .setNegativeButton("Không", dialogClickListener).show();
+                uploadImage(fileUpload);
             }
         }
 
