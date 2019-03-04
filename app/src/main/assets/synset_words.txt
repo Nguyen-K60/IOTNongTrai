@@ -1,6 +1,6 @@
 n01440764 Bệnh điểm vi khuẩn trên lá
 n01443537 Bệnh sương mai ở lá
-n01484850 Bệnh bạc lá do nấm mốc
+n01484850 Bệnh bạc lá do nhện hai đốm 
 n01491361 Bệnh vàng lá do virus gây ra
 n01494475 Lá cà chua khỏe mạnh
 n01496331 electric ray, crampfish, numbfish, torpedo
